@@ -12,8 +12,8 @@
     width: 70px !important;
     height: 70px !important;
     border-radius: 50%;
-    border: 2px solid rgba(0, 0, 0, .8);
-    color: rgba(0, 0, 0, .8);
+    border: 2px solid #000;
+    color: #000;
 }
 .sidebar__top{
     display: flex;

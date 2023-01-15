@@ -1,3 +1,10 @@
+# Project_Clone_Linkedin
+
+Screenshots
+[![imagen-2023-01-14-233321995.png](https://i.postimg.cc/cHpR1Y4f/imagen-2023-01-14-233321995.png)](https://postimg.cc/qhGhjNK7)
+
+https://user-images.githubusercontent.com/100451490/212523897-ef0555c4-4ec6-4f63-90cd-debbcb84d6d9.mp4
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
@@ -44,4 +51,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# Project_Clone_Linkedin
