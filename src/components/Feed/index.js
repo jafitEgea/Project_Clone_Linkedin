@@ -58,7 +58,7 @@ export const Feed = () => {
             description="admin123@email.com"
             message="lorem ipsum"
             photoURL="https://i.ytimg.com/an_webp/9UGRgDILhOk/mqdefault_6s.webp?du=3000&sqp=CJ7UjJ4G&rs=AOn4CLCpWDFotwFX4lpjdybCj7_hcKVJ3Q"
-            images="https://i.ytimg.com/an_webp/2NuGuBpP5fo/mqdefault_6s.webp?du=3000&sqp=CPrKjZ4G&rs=AOn4CLCyLHlKXR_Y3xQ9azApbOZA-fw4Nw"
+            images="https://cdn.dribbble.com/users/2069402/screenshots/5574718/gif-4mb.gif"
 
         />
         <Post 
@@ -66,7 +66,7 @@ export const Feed = () => {
             description="admin123@email.com"
             message="lorem ipsum"
             photoURL="https://i.ytimg.com/an_webp/9UGRgDILhOk/mqdefault_6s.webp?du=3000&sqp=CJ7UjJ4G&rs=AOn4CLCpWDFotwFX4lpjdybCj7_hcKVJ3Q"
-            images="https://i.ytimg.com/an_webp/2NuGuBpP5fo/mqdefault_6s.webp?du=3000&sqp=CPrKjZ4G&rs=AOn4CLCyLHlKXR_Y3xQ9azApbOZA-fw4Nw"
+            images="https://cdn.dribbble.com/users/1124806/screenshots/4871258/ezgif.com-optimize.gif"
 
         />
         <Post 
@@ -74,7 +74,7 @@ export const Feed = () => {
             description="admin123@email.com"
             message="lorem ipsum"
             photoURL="https://i.ytimg.com/an_webp/9UGRgDILhOk/mqdefault_6s.webp?du=3000&sqp=CJ7UjJ4G&rs=AOn4CLCpWDFotwFX4lpjdybCj7_hcKVJ3Q"
-            images="https://i.ytimg.com/an_webp/2NuGuBpP5fo/mqdefault_6s.webp?du=3000&sqp=CPrKjZ4G&rs=AOn4CLCyLHlKXR_Y3xQ9azApbOZA-fw4Nw"
+            images="https://cdn.dribbble.com/users/2069402/screenshots/5574718/gif-4mb.gif"
 
         />
     </div>

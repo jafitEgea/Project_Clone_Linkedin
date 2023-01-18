@@ -1,9 +1,15 @@
 # Project_Clone_Linkedin
 
 Screenshots
-[![imagen-2023-01-14-233321995.png](https://i.postimg.cc/cHpR1Y4f/imagen-2023-01-14-233321995.png)](https://postimg.cc/qhGhjNK7)
 
-https://user-images.githubusercontent.com/100451490/212523897-ef0555c4-4ec6-4f63-90cd-debbcb84d6d9.mp4
+[![imagen-2023-01-18-000911335.png](https://i.postimg.cc/wBPwrszC/imagen-2023-01-18-000911335.png)](https://postimg.cc/3yXj4Nd1)
+
+[![imagen-2023-01-18-001002085.png](https://i.postimg.cc/L8Wk4KWf/imagen-2023-01-18-001002085.png)](https://postimg.cc/yDF3n5sY)
+
+[![imagen-2023-01-18-001051653.png](https://i.postimg.cc/NjKTzC00/imagen-2023-01-18-001051653.png)](https://postimg.cc/NKw5y4mh)
+
+[![imagen-2023-01-18-001231710.png](https://i.postimg.cc/kgSGS04W/imagen-2023-01-18-001231710.png)](https://postimg.cc/mPbTf67r)
+
 
 # Getting Started with Create React App and Redux
 
