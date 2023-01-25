@@ -2,19 +2,53 @@ import React, { useState } from 'react'
 import "./styles.css"
 import Button from '@mui/material/Button';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
+import {auth} from "../../firebase"
+import {useDispatch} from 'react-redux'
+import { login } from "../../features/userSlice";
 
 export const Login = () => {
     const [register, setRegister] = useState(true)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
+    const dispatch = useDispatch()
 
     const handleSubmit = e => {
-        e.preventDefault()
-    }
+        e.preventDefault();
+        auth.signInWithEmailAndPassword(email, password).then(
+            (userAuth) => {
+                dispatch(login({
+                    email: userAuth.user.email,
+                    uid: userAuth.user.uid,
+                    name: userAuth.user.displayName,
+                    photoURL: userAuth.user.photoURL
+                }))
+            }
+        );
+        
+        setName('')
+        setEmail('')
+        setPassword('')
+    };
 
     const handleRegister = e => {
-        e.preventDefault()
+        e.preventDefault();
+
+        auth.createUserWithEmailAndPassword(email, password).then(
+            (userAuth) => {
+                userAuth.user.updateProfile({
+                    displayName: name,
+                    photoURL: ''
+                }).then(() => {
+                    dispatch(login({
+                        email: userAuth.user.email,
+                        uid: userAuth.user.uid,
+                        name: userAuth.user.displayName,
+                        photoURL: userAuth.user.photoURL
+                    }))
+                })
+            }
+        )
     }
 
     return (
