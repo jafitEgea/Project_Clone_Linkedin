@@ -165,3 +165,12 @@
 .sidebar__hash{
     margin-right: 4px;
 }
+.files{
+    position: absolute;
+    top: 65px;
+    width: 1px;
+    height: 7px;
+    padding: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+}    

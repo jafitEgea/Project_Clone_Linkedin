@@ -1,13 +1,14 @@
 import React, {useState} from 'react'
 import './styles.css'
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 import InsertPhotoRoundedIcon from '@mui/icons-material/InsertPhotoRounded';
 import SmartDisplayRoundedIcon from '@mui/icons-material/SmartDisplayRounded';
 import AttachFileRoundedIcon from '@mui/icons-material/AttachFileRounded';
 import { InputIcon } from './InputIcon';
 import { Post } from './Post';
-
+import { Avatar } from '@mui/material';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 
 export const Feed = () => {
     const [input, setInput] = useState('')
@@ -18,18 +19,26 @@ export const Feed = () => {
         setInput('')
     }
 
+    const user = useSelector(selectUser)
+
   return (
     <div className='feed'>
         <div className="feed__containerInput">
-            <div className="feed__input">
-            <CreateRoundedIcon className='feed__input__icon'/>
-                <form>
-                    <input type="text" placeholder='Escribe una publicacion' 
-                            value={input}
-                            onChange={e => setInput(e.target.value)}
-                            />
-                            <button onClick={sendPost} type="submit">Enviar</button>
-                </form>
+            <div className="feed_profile_input">
+                {user ? <Avatar src={user?.photoURL} 
+                className="feed__inputProfileIcon"> {user?.name[0]} </Avatar> : 
+                <Avatar className='feed__inputProfileIcon' />}
+                
+                <div className="feed__input">
+                <CreateRoundedIcon className='feed__input__icon'/>
+                    <form>
+                        <input type="text" placeholder='Escribe una publicacion' 
+                                value={input}
+                                onChange={e => setInput(e.target.value)}
+                                />
+                                <button onClick={sendPost} type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
             <div className="feed__inputIcon">
             {/*Icons*/}

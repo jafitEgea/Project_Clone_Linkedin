@@ -10,13 +10,24 @@
     background: #fff;
     border-radius: 10px;
 }
+.feed_profile_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+.feed__inputProfileIcon{
+    margin-right: 6px;
+    margin-left: -2px;
+}
 .feed__input{
-    display:flex;
+    display: flex;
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 30px;
     padding: 10px 16px;
-    margin: 4px 0;   
+    margin: 4px 0;
+    width: 100%;
 }
 .feed__input:hover{
     background:rgba(0, 0, 0, .05);

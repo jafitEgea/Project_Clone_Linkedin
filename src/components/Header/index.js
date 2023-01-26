@@ -6,11 +6,17 @@ import ForumRoundedIcon from '@mui/icons-material/ForumRounded';
 import SupervisorAccountRoundedIcon from '@mui/icons-material/SupervisorAccountRounded';
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
-import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import './styles.css'
+import {auth} from '../../firebase'
 
 export const Header = () => {
+
+  const logout = () => {
+    auth.signOut()
+  }
+
   return (
     <header className='header'>
         <nav className='nav'>
@@ -28,7 +34,7 @@ export const Header = () => {
             <HeaderIcons Icon={ForumRoundedIcon} title="Mensajes"/>
             <HeaderIcons Icon={NotificationsRoundedIcon} title="Notificaciones"/>
             <HeaderIcons avatar title="Mi perfil"/>
-            <HeaderIcons Icon={AppsRoundedIcon} title="Productos"/>
+            <HeaderIcons Icon={LogoutRoundedIcon} title="Cerrar sesión" salir={logout}/>
             <HeaderIcons text="This is a personal project"/>
         </nav>
     </header>
