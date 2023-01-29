@@ -21,8 +21,7 @@
     align-items: center;
     text-align: center;
     border: 1px solid #ddd;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     background: white;
     height: fit-content;
     padding-bottom: 10px;
