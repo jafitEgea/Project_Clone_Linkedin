@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { selectUser, login, logout } from './features/userSlice'
+import { selectUser, login, logout } from './features/useSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { Feed } from './components/Feed';
 import { Header } from './components/Header';
@@ -27,7 +27,7 @@ function App() {
         dispatch(logout())
       }
     })
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="App">

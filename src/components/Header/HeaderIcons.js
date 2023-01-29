@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import { Avatar } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { selectUser } from '../../features/userSlice';
+import { selectUser } from '../../features/useSlice';
 
 export const HeaderIcons = ({Icon, title, text, avatar, salir}) => {
 

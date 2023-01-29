@@ -18,8 +18,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const analytics = firebase.analytics();
-
 const db = app.firestore()
+db.settings({ experimentalForceLongPolling: true, merge: true })
 const auth = firebase.auth()
 const storage = firebase.storage()
 

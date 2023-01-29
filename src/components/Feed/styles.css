@@ -129,3 +129,13 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.file{
+    position: absolute;
+    left: 32%;
+    width: 30px;
+    height: 1px;
+    padding: 1.35rem;
+    cursor: pointer;
+    opacity: 0;   
+}

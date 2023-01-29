@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React /*{ useState }*/ from 'react'
 import TurnedInRoundedIcon from '@mui/icons-material/TurnedInRounded';
 import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import { Avatar } from '@mui/material';
 import "./styles.css"
-import { selectUser, login } from '../../features/userSlice'
+import { selectUser, login } from '../../features/useSlice'
 import { useDispatch, useSelector } from 'react-redux';
-import { auth, storage } from '../../firebase';
+import { auth, storage, db } from '../../firebase';
 
 export const Sidebar = () => {
 
   const user = useSelector(selectUser);
   //console.log(user)
-  const [imgURL, setImgURL] = useState('')
+  //const [imgURL, setImgURL] = useState('')
   
   const dispatch = useDispatch()
+
+  const updatePost = async (url) => {
+    const postRef = db.collection("posts");
+    const query = await postRef.where("description", "==", user.email).get()
+    query.docs.map(doc => (
+      (async () => {
+        const post = db.collection("posts").doc(doc.id)
+        await post.update({photoURL: url})
+      })()
+    ))
+  }
 
   const updateEmail = (url) => {
     auth.currentUser.updateProfile({
@@ -26,6 +37,7 @@ export const Sidebar = () => {
         name: user.name,
         photoURL: url
       }))
+      updatePost(url)
     })
       .catch((error) => {
         console.log(error)
@@ -60,7 +72,7 @@ export const Sidebar = () => {
     <div className='sidebar'>
       <div className="sidebar__top">
         <img src="https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-          alt="" />
+          alt="cover" />
 
         <Avatar src={user.photoURL} className='sidebar__avatar'>
           {user.name[0]}

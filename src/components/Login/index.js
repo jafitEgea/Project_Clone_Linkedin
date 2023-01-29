@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import {auth} from "../../firebase"
 import {useDispatch} from 'react-redux'
-import { login } from "../../features/userSlice";
+import { login } from "../../features/useSlice";
 
 export const Login = () => {
     const [register, setRegister] = useState(true)
